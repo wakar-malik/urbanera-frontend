@@ -1,6 +1,6 @@
 import React from 'react'
-// import images from '../utils/image'
 import slides from '../utils/slides'
+import images from '../utils/image'
 import { RiArrowRightSLine } from "react-icons/ri";
 
 const Home = () => {
