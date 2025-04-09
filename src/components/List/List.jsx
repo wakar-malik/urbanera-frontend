@@ -13,7 +13,7 @@ const List = () => {
   ]
 
   return (
-    <ul className='flex items-center gap-3 capitalize text-xl'>
+    <ul className='flex items-center gap-3 capitalize text-xl font-normal font-josefin'>
       {listOfItem.map((item, index) => (
         <li className='cursor-pointer' key={index}>{item}</li>
       ))}
