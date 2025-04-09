@@ -1,4 +1,5 @@
-import logo from '../assets/moncler-images/logo.png';
+import logo from '../assets/moncler-images/Dark-logo.png';
+import lightLogo from '../assets/moncler-images/Light-logo.png';
 import heroSlide1 from '../assets/moncler-images/hero-slide-img1.png'
 import heroSlide2 from '../assets/moncler-images/hero-slide-img2.png'
 import sliderImage1 from '../assets/moncler-images/slider-image-1.png'
@@ -12,6 +13,7 @@ import thirdSliderImg2 from '../assets/moncler-images/third-slider-img2.png'
 import thirdSliderImg3 from '../assets/moncler-images/third-slider-img3.png'
 
 const images = {
+  lightLogo,
   logo,
   heroSlide1,
   heroSlide2,
