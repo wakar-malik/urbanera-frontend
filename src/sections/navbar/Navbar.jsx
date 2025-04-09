@@ -13,10 +13,11 @@ const Navbar = () => {
       window.scrollY > 30 ? setSticky(true) : setSticky(false)
     })
   }, [])
-   
+
   return (
-    <div className={`flex justify-between fixed top-0 right-0 left-0 px-8 z-10 hover:bg-white hover:text-black transition duration-400 ${sticky ? 'text-black bg-white' : 'text-white'}`}>
-      <img className='w-[220px] cursor-pointer bg-white' src={images.logo} alt="logo" />
+    <div className={`flex justify-between fixed top-0 right-0 left-0 px-8 py-3 z-10 group hover:bg-white hover:text-black transition duration-400 ${sticky ? 'text-black bg-white' : 'text-white'}`}>
+      <div className={`absolute top-3 w-2xs h-14 group-hover:opacity-100 ${sticky ? 'opacity-100' : 'opacity-0'}`}><img className='-ml-1.5' src={images.logo} alt="" /></div>
+      <img className='w-[220px] cursor-pointer' src={images.lightLogo} alt="logo" />
       <List />
       <div id="order-profile-section" className='flex items-center gap-4 cursor-pointer'>
         <Icon ReactIcon={<ICONS.RiPhoneLine className='text-2xl' />} />
