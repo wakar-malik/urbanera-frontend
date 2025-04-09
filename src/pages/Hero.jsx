@@ -1,23 +1,43 @@
-import React from 'react'
-import slides from '../utils/slides'
-import images from '../utils/image'
-import { RiArrowRightSLine } from "react-icons/ri";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import { EffectFade } from 'swiper/modules';
+import Navbar from '../sections/navbar/Navbar';
+import Slides from '../utils/slides';
+import Button from '../components/Button/Button';
 
-const Home = () => {
+export default function Hero() {
+
+  const btnText = [
+    'SHOP NOW',
+    'DISCOVER MORE'
+  ]
+
   return (
-    <div className='w-full h-screen relative'>
-      <div className='bg-black w-full h-full opacity-25 absolute bottom-0 top-0'></div>
-      <img src={images.heroSlide} alt="" className='w-full h-screen object-cover' />
-      <div className='flex flex-col gap-7 absolute bottom-14 text-white left-135 text-center px-7'>
-        <h2 className='text-2xl'>MONCLER X MERCEDES-BENZ BY NIGO</h2>
-        <h1 className='text-5xl'>ONLINE EXCLUSIVE PRE-LAUNCH</h1>
-        <div className='flex items-center justify-center gap-6'>
-          <button className='flex gap-2 items-center cursor-pointer'>SHOP NOW <RiArrowRightSLine className='text-xl' /></button>
-          <button className='flex gap-2 items-center cursor-pointer'>DISCOVER MORE <RiArrowRightSLine className='text-xl'/></button>
-        </div>
+    <>
+      <Navbar />
+      <div className='h-screen'>
+        <Swiper
+          spaceBetween={30}
+          effect={'fade'}
+          loop={true}
+          modules={[EffectFade]}
+          className="mySwiper"
+        >
+          {Slides.map((item, index) => (
+            <SwiperSlide key={index}>
+              <img src={item.heroImg} />
+              <div className='flex flex-col gap-7 absolute bottom-14 text-white left-135 text-center px-7 font-josefin'>
+                <h2 className='text-2xl'>{item.subHeading}</h2>
+                <h1 className='text-5xl'>{item.heading}</h1>
+                <div className='flex items-center justify-center gap-6'>
+                  {btnText.map((text, idx) => (<Button key={idx} text={text} />))}
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
-    </div>
-  )
+    </>
+  );
 }
-
-export default Home
