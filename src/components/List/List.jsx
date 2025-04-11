@@ -1,6 +1,6 @@
 import React from 'react'
 
-const List = () => {
+const List = ({className, icon}) => {
 
   const listOfItem = [
     " latest",
@@ -13,9 +13,9 @@ const List = () => {
   ]
 
   return (
-    <ul className='flex items-center gap-3 capitalize text-xl font-normal font-josefin'>
+    <ul className={` items-center gap-3 capitalize font-normal font-josefin ${className} lg:flex`}>
       {listOfItem.map((item, index) => (
-        <li className='cursor-pointer' key={index}>{item}</li>
+        <li className='cursor-pointer flex justify-between' key={index}>{item}{icon}</li>
       ))}
     </ul>
   )
