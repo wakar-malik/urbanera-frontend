@@ -10,8 +10,8 @@ const Slides = [
   },
   {
     heroImg: heroSlide2,
-    heading: "ONLINE EXCLUSIVE PRE-LAUNCH",
-    subHeading: "MONCLER X MERCEDES-BENZ BY NIGO",
+    heading: "New Arrivals",
+    subHeading: "SPRING 2025",
   },
   {
     heroImg: heroSlide3,
