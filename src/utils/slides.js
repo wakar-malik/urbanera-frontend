@@ -1,5 +1,5 @@
 import heroSlide1 from '../assets/moncler-images/hero-slide-img1.png';
-import heroSlide2 from '../assets/moncler-images/hero-slide-img2.png';
+import heroSlide2 from '../assets/moncler-images/hero-slide-3.jpg';
 import heroSlide3 from '../assets/moncler-images/second-slider-section-img.png';
 
 const Slides = [

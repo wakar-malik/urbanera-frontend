@@ -3,5 +3,7 @@
 
 @theme {
   --font-josefin: "Josefin Sans", sans-serif;
-  --primary-color: #A3A3A3;
+  --primary-color: #a3a3a3;
+
+  --breakpoint-xs: 25rem;
 }

@@ -116,16 +116,16 @@ export default function App() {
   return (
     <>
       <div className="flex flex-col gap-2 items-center mt-10 lg:mt-24">
-        <h1 className="text-xl lg:text-4xl">EXPLORE THE COLLECTION</h1>
+        <h1 className="text-xl lg:text-4xl xs:text-xl">EXPLORE THE COLLECTION</h1>
         <p className="text-sm">SHOP NOW</p></div>
-      <Swiper className="py-15 relative h-[90vh]" slidesPerView={4} spaceBetween={15}
+      <Swiper className="py-15 relative h-auto 2xl:h-[85vh] xl:h-[70vh] lg:h-[60vh]" slidesPerView={4} spaceBetween={15}
         breakpoints={{
           400: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 5,
           },
           500: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 5,
           },
           640: {
@@ -142,7 +142,7 @@ export default function App() {
           },
         }}
       >
-        <div className="absolute top-0 right-8 w-25 h-8"><NavigationBtn /></div>
+        <div className="absolute top-0 right-4 w-25 mt-1"><NavigationBtn /></div>
         {outerSlides.map((slide, index) => (
           <SwiperSlide
             key={index}
