@@ -26,11 +26,11 @@ export default function Hero() {
       >
         {Slides.map((item, index) => (
           <SwiperSlide key={index}><img className='h-full w-full object-cover' src={item.heroImg} />
-          <div className='bg-black opacity-30 w-full h-screen absolute top-0 left-0'></div>
+            <div className='bg-black opacity-30 w-full h-screen absolute top-0 left-0'></div>
             <div className='flex flex-col items-center gap-2 absolute bottom-14 text-white text-center px-7 font-josefin w-full lg:gap-7'>
-              <h2 className='text-xl lg:text-2xl'>{item.subHeading}</h2>
-              <h1 className='text-3xl lg:text-5xl'>{item.heading}</h1>
-              <div className='flex items-center justify-center gap-6'>
+              <h2 className='lg:text-2xl xs:text-xl'>{item.subHeading}</h2>
+              <h1 className='lg:text-5xl xs:text-2xl'>{item.heading}</h1>
+              <div className='flex items-center justify-center gap-6 text-[12px] xs:text-[14px]'>
                 {btnText.map((text, idx) => (<Button key={idx} text={text} />))}
               </div>
             </div>
