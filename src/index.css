@@ -6,4 +6,6 @@
   --primary-color: #a3a3a3;
 
   --breakpoint-xs: 25rem;
+  --breakpoint-xss: 22rem;
+  --breakpoint-xsm: 31rem;
 }

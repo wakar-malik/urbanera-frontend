@@ -116,10 +116,14 @@ export default function App() {
   return (
     <>
       <div className="flex flex-col gap-2 items-center mt-10 lg:mt-24">
-        <h1 className="text-xl lg:text-4xl xs:text-xl">EXPLORE THE COLLECTION</h1>
+        <h1 className="text-xl lg:text-4xl xs:text-2xl 2xl:font-normal xs:font-light">EXPLORE THE COLLECTION</h1>
         <p className="text-sm">SHOP NOW</p></div>
       <Swiper className="py-15 relative h-auto 2xl:h-[85vh] xl:h-[70vh] lg:h-[60vh]" slidesPerView={4} spaceBetween={15}
         breakpoints={{
+          300: {
+            slidesPerView: 1,
+            spaceBetween: 5,
+          },
           400: {
             slidesPerView: 1,
             spaceBetween: 5,
@@ -148,7 +152,7 @@ export default function App() {
             key={index}
             onMouseEnter={() => setActiveIndex(index)}
             onMouseLeave={() => setActiveIndex(null)}
-            className="flex flex-col  mt-10 first-of-type:ml-8 w-full"
+            className="flex flex-col  mt-10 2xl:first-of-type:ml-8 xss:first-of-type:ml-3 w-full"
           >
             <Swiper
               className=""
@@ -167,8 +171,8 @@ export default function App() {
               </div>
             </Swiper>
             <div className=" w-full flex flex-col items-start gap-2 mt-7 text-start">
-              <h3 className="text-sm">{slide.title}</h3>
-              <span className="text-sm font-bold">${slide.price}</span>
+              <h3 className="text-sm 2xl:font-normal xss:font-light">{slide.title}</h3>
+              <span className="text-sm  2xl:font-bold xss:font-light">${slide.price}</span>
               <div className="flex gap-1">
                 {
                   slide.colors.map((color, idex) => (
