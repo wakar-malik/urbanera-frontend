@@ -16,16 +16,16 @@ const Navbar = () => {
   }, [])
 
   return (
-    <div className={`flex justify-between fixed top-0 right-0 left-0 px-8 py-3 z-10 group hover:bg-white hover:text-black transition duration-400 ${sticky ? 'text-black bg-white' : 'text-white'}`}>
-      <div className={`absolute top-3 w-2xs h-14 group-hover:opacity-100 ${sticky ? 'opacity-100' : 'opacity-0'}`}><img className='-ml-1.5 w-[190px] lg:w-[220px]' src={images.logo} alt="logo" /></div>
-      <img className='w-[190px] cursor-pointer lg:w-[220px]' src={images.lightLogo} alt="logo" />
+    <div className={`flex justify-between fixed top-0 right-0 left-0 2xl:px-8 xss:px-3 py-3 z-10 group hover:bg-white hover:text-black transition duration-400 ${sticky ? 'text-black bg-white' : 'text-white'}`}>
+      <div className={`absolute top-3 w-2xs h-14 group-hover:opacity-100 ${sticky ? 'opacity-100' : 'opacity-0'}`}><img className='-ml-1.5 xss:ml-0 w-[190px] lg:w-[220px] xss:w-[150px]' src={images.logo} alt="logo" /></div>
+      <img className='w-[190px] cursor-pointer lg:w-[220px] xss:w-[150px]' src={images.lightLogo} alt="logo" />
       <List className={'hidden'} />
       <div className='flex items-center gap-4 lg:hidden cursor-pointer'>
         <Icon ReactIcon={<img src={ICONS.search} alt="menu" className='w-6' />} />
         <Icon ReactIcon={<img src={ICONS.shoppingBag} alt="menu" className='w-6' />} />
         <Icon ReactIcon={<img src={ICONS.menu} alt="menu" className='w-6' onClick={() => setMenu(true)} />} />
       </div>
-      <div className={`flex items-center gap-4 cursor-pointer absolute right-8 top-4 lg:hidden opacity-0 group-hover:opacity-100  ${sticky ? 'opacity-100' : 'opacity-0'}`}>
+      <div className={`flex items-center gap-4 cursor-pointer absolute right-8 xss:right-3 xss:top-3 top-4 lg:hidden opacity-0 group-hover:opacity-100  ${sticky ? 'opacity-100' : 'opacity-0'}`}>
         <Icon ReactIcon={<img src={ICONS.BlackSearch} alt="menu" className='w-6' />} />
         <Icon ReactIcon={<img src={ICONS.BlackShoppingBag} alt="menu" className='w-6' />} />
         <Icon ReactIcon={<img src={ICONS.BlackMenu} alt="menu" className='w-6' onClick={() => setMenu(true)} />} />
