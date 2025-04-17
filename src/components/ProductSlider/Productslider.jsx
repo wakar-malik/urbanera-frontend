@@ -30,7 +30,7 @@ export default function App() {
   return (
     <>
       <div className="p-0 md:px-4 lg:px-[30px]">
-        <Swiper className="2xl:h-[82vh] flex gap-6 group" slidesPerView={3}
+        <Swiper className="2xl:h-[82vh] flex gap-6 group"
           breakpoints={{
             300: {
               slidesPerView: 1.5,
@@ -45,16 +45,8 @@ export default function App() {
               spaceBetween: 15,
             },
             640: {
-              slidesPerView: 1.9,
+              slidesPerView: 1.4,
               spaceBetween: 15,
-            },
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 15,
-            },
-            1024: {
-              slidesPerView: 4,
-              spaceBetween: 20,
             },
           }}
         >
