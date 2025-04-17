@@ -8,4 +8,15 @@
   --breakpoint-xs: 25rem;
   --breakpoint-xss: 22rem;
   --breakpoint-xsm: 31rem;
+
+  --animate-marquee: marquee 35s linear infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 }
